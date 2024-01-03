@@ -97,18 +97,12 @@ class GameFragment : Fragment() {
                         setQuestion()
                         binding.invalidateAll()
                     } else {
-                        // We've won!  Navigate to the gameWonFragment.
-                        // TODO (05) Find the navController from the view and navigate to the gameWonFragment
                         view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
-                        // call view.findNavController
-                        // navigate to R.id.action_gameFragment_to_gameWonFragment
                     }
                 } else {
                     // Game over! A wrong answer sends us to the gameOverFragment.
                     // TODO (06) Find the navController from the view and navigate to the gameOverFragment
                     view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment2)
-                    // call view.findNavController
-                    // navigate to R.id.action_gameFragment_to_gameOverFragment
                 }
             }
         }

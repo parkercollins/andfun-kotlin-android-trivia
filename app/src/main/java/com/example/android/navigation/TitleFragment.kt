@@ -14,7 +14,7 @@ import com.example.android.navigation.databinding.FragmentTitleBinding
  * create an instance of this fragment.
  */
 class TitleFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -48,7 +48,7 @@ class TitleFragment : Fragment() {
          * @param param2 Parameter 2.
          * @return A new instance of fragment TitleFragment.
          */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance(
             param1: String,

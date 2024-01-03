@@ -22,6 +22,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.android.navigation.databinding.FragmentGameOverBinding
 
 class GameOverFragment : Fragment() {
@@ -38,6 +39,9 @@ class GameOverFragment : Fragment() {
                 container,
                 false,
             )
+        binding.tryAgainButton.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_gameOverFragment2_to_gameFragment)
+        }
         return binding.root
     }
 }
