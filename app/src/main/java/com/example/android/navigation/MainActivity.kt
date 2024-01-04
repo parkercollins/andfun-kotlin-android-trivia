@@ -16,13 +16,16 @@
 
 package com.example.android.navigation
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.onNavDestinationSelected
 import com.example.android.navigation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -33,16 +36,27 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
     }
-
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.overflow_menu, menu)
         return true
 
     }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return when (item.itemId) {
+//            R.id.aboutFragment -> {
+//                val controller = this.findNavController(RmyNavHostFragment)
+//                controller.navigate(R.id.aboutFragment)
+//                return true
+//
+//            }
+        return item.onNavDestinationSelected(findNavController(R.id.myNavHostFragment)) || super.onOptionsItemSelected(item)
+    }
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return navController.navigateUp()
     }
+
 }
