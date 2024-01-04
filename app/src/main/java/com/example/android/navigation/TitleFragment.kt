@@ -20,7 +20,6 @@ class TitleFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         arguments?.let {
         }
     }
@@ -37,9 +36,7 @@ class TitleFragment : Fragment() {
         binding.playButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment),
         )
-
         return binding.root
-
     }
 
     companion object {
