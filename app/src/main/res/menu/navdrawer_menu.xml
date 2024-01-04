@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="rulesFragment"
+            android:title="@string/rules"
+            android:icon="@drawable/trivia_rules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <item
+            android:id="aboutFragment2"
+            android:title="@string/about"
+            android:icon="@drawable/android"
+        />
+</menu>
